@@ -61,12 +61,11 @@
             
                 Our renewal form. Note that Django requires a CSRF token in order to help protect the user from cross-siterequest attacks.
                 This is passed to every template by default and re-checked when the form is submitted back to us.
-            <form action="/renewals/add/" method="post">{% csrf_token %}
-                Card
+            <form action="/renewals/add/" method="post">
                 <div class="card text-dark">
                     <div class="card-header">
                         <h4 class="m-0 float-left">New Renewal Entry</h4>
-                        <small class="text-secondary mt-1 float-right">{{ date }}</small>
+                        <small class="text-secondary mt-1 float-right"></small>
                     </div>
                     <div class="card-body">
                         <div class="form-group">
