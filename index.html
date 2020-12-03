@@ -51,23 +51,18 @@
     
     
     <!DOCTYPE html>
-{% load static %}
 
 <head>
-    {% include 'modules/dependencies.html' %}
 </head>
 
 <body>
-    {% include 'modules/navbar.html' %}
     <div class="container">
         <div class="wrapper pt-4 pb-4">
-
-            {% comment %}
+            
                 Our renewal form. Note that Django requires a CSRF token in order to help protect the user from cross-siterequest attacks.
                 This is passed to every template by default and re-checked when the form is submitted back to us.
-            {% endcomment %}
             <form action="/renewals/add/" method="post">{% csrf_token %}
-                {% comment %} Card {% endcomment %}
+                Card
                 <div class="card text-dark">
                     <div class="card-header">
                         <h4 class="m-0 float-left">New Renewal Entry</h4>
